@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:linked_redesign/src/ui/home_screen.dart';
-import 'package:linked_redesign/src/ui/splash_screen.dart';
+import 'package:aicte_upskill_rural_youth/src/ui/home_screen.dart';
+import 'package:aicte_upskill_rural_youth/src/ui/splash_screen.dart';
 
 const String routeInitial = "splash";
 const String homePage = "homePage";

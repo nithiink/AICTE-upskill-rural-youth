@@ -1,0 +1,4 @@
+#Fri Nov 11 19:33:24 IST 2022
+base.0=/Users/nithiinkathiresan/Development/College Projects/AICTE - Upskill Rural Youth/flutter/aicte_upskill_rural_youth/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

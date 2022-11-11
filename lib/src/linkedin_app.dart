@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:linked_redesign/src/styles/app_colors.dart';
-import 'package:linked_redesign/src/ui/splash_screen.dart';
-import 'package:linked_redesign/src/utils/router.dart' as LRRouter;
+import 'package:aicte_upskill_rural_youth/src/styles/app_colors.dart';
+import 'package:aicte_upskill_rural_youth/src/ui/splash_screen.dart';
+import 'package:aicte_upskill_rural_youth/src/utils/router.dart' as LRRouter;
 
 class LinkedinApp extends StatefulWidget {
   // This widget is the root of your application.

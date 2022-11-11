@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:linked_redesign/src/bloc/state_bloc.dart';
-import 'package:linked_redesign/src/styles/app_colors.dart';
+import 'package:aicte_upskill_rural_youth/src/bloc/state_bloc.dart';
+import 'package:aicte_upskill_rural_youth/src/styles/app_colors.dart';
 
 class JobsScreen extends StatefulWidget {
   @override
@@ -9,10 +9,10 @@ class JobsScreen extends StatefulWidget {
 }
 
 class _JobsScreenState extends State<JobsScreen> {
-  List<JobsModel> activeJobsModelList;
-  List<JobsModel> allJobsModelList;
-  List<JobsModel> savedJobsModelList;
-  BaseStateBloc<int> baseStateBloc;
+  late List<JobsModel> activeJobsModelList;
+  late List<JobsModel> allJobsModelList;
+  late List<JobsModel> savedJobsModelList;
+  late BaseStateBloc<int> baseStateBloc;
 
   @override
   void initState() {
@@ -22,26 +22,26 @@ class _JobsScreenState extends State<JobsScreen> {
   }
 
   void loadData() {
-    activeJobsModelList = List();
-    allJobsModelList = List();
-    savedJobsModelList = List();
+    activeJobsModelList = [];
+    allJobsModelList = [];
+    savedJobsModelList = [];
     List.generate(10, (index) {
       activeJobsModelList.add(JobsModel(
-          "https://media-exp1.licdn.com/dms/image/C4D0BAQHiNSL4Or29cg/company-logo_200_200/0?e=1587600000&v=beta&t=2kOIcxiy7N15P9rUtQ96jTnwGlhwIQTAAVRawIu7ndY",
+          "https://imgv3.fotor.com/images/blog-cover-image/10-profile-picture-ideas-to-make-you-stand-out.jpg",
           "Head of Design",
           "As a UX Engineer, you will be passionate about developing powerful Android apps that work efficiently across a range of devices. With a keen interest in mobile development and building delightful user interfaces, you will work effectively in a fast-paced and startup-like environment. In addition, you’re motivated and excited about making a positive social impact through your work.",
           "Google"));
     });
     List.generate(10, (index) {
       allJobsModelList.add(JobsModel(
-          "https://media-exp1.licdn.com/dms/image/C4D0BAQHiNSL4Or29cg/company-logo_200_200/0?e=1587600000&v=beta&t=2kOIcxiy7N15P9rUtQ96jTnwGlhwIQTAAVRawIu7ndY",
+          "https://imgv3.fotor.com/images/blog-cover-image/10-profile-picture-ideas-to-make-you-stand-out.jpg",
           "Lead UX Engineer",
           "As a UX Engineer, you will be passionate about developing powerful Android apps that work efficiently across a range of devices. With a keen interest in mobile development and building delightful user interfaces, you will work effectively in a fast-paced and startup-like environment. In addition, you’re motivated and excited about making a positive social impact through your work.",
           "Google"));
     });
     List.generate(10, (index) {
       savedJobsModelList.add(JobsModel(
-          "https://media-exp1.licdn.com/dms/image/C4D0BAQHiNSL4Or29cg/company-logo_200_200/0?e=1587600000&v=beta&t=2kOIcxiy7N15P9rUtQ96jTnwGlhwIQTAAVRawIu7ndY",
+          "https://imgv3.fotor.com/images/blog-cover-image/10-profile-picture-ideas-to-make-you-stand-out.jpg",
           "UX Engineer",
           "As a UX Engineer, you will be passionate about developing powerful Android apps that work efficiently across a range of devices. With a keen interest in mobile development and building delightful user interfaces, you will work effectively in a fast-paced and startup-like environment. In addition, you’re motivated and excited about making a positive social impact through your work.",
           "Google"));
@@ -53,13 +53,19 @@ class _JobsScreenState extends State<JobsScreen> {
     return Scaffold(
       backgroundColor: AppColors.linkedinLightGray,
       appBar: AppBar(
-        title: Text("Jobs",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600),),
+        title: Text(
+          "Jobs",
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+        ),
         elevation: 0,
         centerTitle: false,
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Icon(Icons.search, color: AppColors.linkedinBlue,),
+            child: Icon(
+              Icons.search,
+              color: AppColors.linkedinBlue,
+            ),
           ),
         ],
       ),

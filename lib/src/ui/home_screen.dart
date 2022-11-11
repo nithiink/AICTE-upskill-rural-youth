@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:linked_redesign/src/bloc/state_bloc.dart';
-import 'package:linked_redesign/src/styles/app_colors.dart';
-import 'package:linked_redesign/src/ui/messages_screen.dart';
-import 'package:linked_redesign/src/ui/news_feed_screen.dart';
-import 'package:linked_redesign/src/ui/profile_screen.dart';
+import 'package:aicte_upskill_rural_youth/src/bloc/state_bloc.dart';
+import 'package:aicte_upskill_rural_youth/src/styles/app_colors.dart';
+import 'package:aicte_upskill_rural_youth/src/ui/messages_screen.dart';
+import 'package:aicte_upskill_rural_youth/src/ui/news_feed_screen.dart';
+import 'package:aicte_upskill_rural_youth/src/ui/profile_screen.dart';
 
 import 'jobs_screen.dart';
 import 'notifications_screens.dart';
@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  BaseStateBloc<int> baseStateBloc;
+  late BaseStateBloc<int> baseStateBloc;
 
   @override
   void initState() {

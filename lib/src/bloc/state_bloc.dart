@@ -16,7 +16,7 @@ typedef ChangeState<T> = T Function(T value);
 */
 
 class BaseStateBloc<T> {
-  T _value;
+  late T _value;
   StreamController<T> controller = StreamController<T>.broadcast();
 
   BaseStateBloc(T initialData) {
@@ -35,7 +35,7 @@ class BaseStateBloc<T> {
   });
   */
 
-  changeState({@required ChangeState<T> state}) {
+  changeState({required ChangeState<T> state}) {
     _value = state(_value);
     controller.sink.add(_value);
   }
@@ -64,13 +64,13 @@ class BaseStateBloc<T> {
   });
 
   */
-  
-  Widget blocWidget({@required OnWidgetStateChanged<T> widget}) {
+
+  Widget blocWidget({required OnWidgetStateChanged<T> widget}) {
     return StreamBuilder<T>(
       initialData: _value,
       stream: controller.stream,
       builder: (context, AsyncSnapshot<T> snapshot) {
-        return widget(snapshot.data);
+        return widget(snapshot.data!);
       },
     );
   }

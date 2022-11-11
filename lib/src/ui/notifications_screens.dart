@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:linked_redesign/src/styles/app_colors.dart';
+import 'package:aicte_upskill_rural_youth/src/styles/app_colors.dart';
 
 class NotificationsScreen extends StatefulWidget {
   @override
@@ -7,7 +7,7 @@ class NotificationsScreen extends StatefulWidget {
 }
 
 class _NotificationsScreenState extends State<NotificationsScreen> {
-  List<NotificationModel> messageList;
+  late List<NotificationModel> messageList;
 
   @override
   void initState() {
@@ -16,10 +16,10 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
   }
 
   void loadData() {
-    messageList = List();
+    messageList = [];
     List.generate(20, (index) {
       messageList.add(NotificationModel(
-        "https://media-exp1.licdn.com/dms/image/C5103AQHpyZyF9uuJ5g/profile-displayphoto-shrink_200_200/0?e=1585180800&v=beta&t=4UizUlQ-MLSOQxzQdFgQVEt3XkNndVIvtb9-pcIjWmE",
+        "https://imgv3.fotor.com/images/blog-cover-image/10-profile-picture-ideas-to-make-you-stand-out.jpg",
         "Vishal",
         "Hi There, Who is this ??",
         "9:30 am",

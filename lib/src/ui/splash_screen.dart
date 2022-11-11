@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:linked_redesign/src/styles/app_colors.dart';
-import 'package:linked_redesign/src/utils/router.dart';
+import 'package:aicte_upskill_rural_youth/src/styles/app_colors.dart';
+import 'package:aicte_upskill_rural_youth/src/utils/router.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -10,8 +10,8 @@ class SplashScreen extends StatefulWidget {
 }
 
 class SplashState extends State<SplashScreen> with TickerProviderStateMixin {
-  AnimationController animationController;
-  Animation<double> animation;
+  late AnimationController animationController;
+  late Animation<double> animation;
 
   @override
   void initState() {
@@ -34,12 +34,12 @@ class SplashState extends State<SplashScreen> with TickerProviderStateMixin {
       //  backgroundColor: AppColors.linkedinBlue,
       body: Container(
         decoration: BoxDecoration(
-            color: AppColors.linkedinBlue,
+          color: AppColors.linkedinBlue,
         ),
         child: Center(
             child: Image.asset(
           "assets/images/linkedin_logo.png",
-         // color: AppColors.white,
+          // color: AppColors.white,
           width: MediaQuery.of(context).size.width / 1.8,
         )),
       ),

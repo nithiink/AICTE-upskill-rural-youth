@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:linked_redesign/src/styles/app_colors.dart';
+import 'package:aicte_upskill_rural_youth/src/styles/app_colors.dart';
 
 class NewsFeedScreen extends StatefulWidget {
   @override
@@ -7,7 +7,7 @@ class NewsFeedScreen extends StatefulWidget {
 }
 
 class _NewsFeedScreenState extends State<NewsFeedScreen> {
-  List<NewsFeedModel> newsFeedList;
+  late List<NewsFeedModel> newsFeedList;
 
   @override
   void initState() {
@@ -16,7 +16,7 @@ class _NewsFeedScreenState extends State<NewsFeedScreen> {
   }
 
   loadData() {
-    newsFeedList = List();
+    newsFeedList = [];
     List.generate(30, (index) {
       newsFeedList.add(NewsFeedModel(
           "Ashish Rawat",
