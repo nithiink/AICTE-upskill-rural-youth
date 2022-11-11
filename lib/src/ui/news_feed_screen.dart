@@ -20,10 +20,10 @@ class _NewsFeedScreenState extends State<NewsFeedScreen> {
     List.generate(30, (index) {
       newsFeedList.add(NewsFeedModel(
           "Ashish Rawat",
-          "https://imgv3.fotor.com/images/blog-cover-image/10-profile-picture-ideas-to-make-you-stand-out.jpg",
+          "https://www.keela.co/wp-content/uploads/Roundedheadshots-37984972-1920w.png",
           "Android App Developer",
           "This is a demo description but we will add some",
-          "https://imgv3.fotor.com/images/blog-cover-image/10-profile-picture-ideas-to-make-you-stand-out.jpg",
+          "https://media.gettyimages.com/id/1429909210/photo/an-asian-woman-working-with-laptop-in-a-natural-modern-office.jpg?s=612x612&w=0&k=20&c=KHQgZ-2kNg7tzs6nNV8LZBu6p-dODLhGDFclL7trs3M=",
           "344",
           "25"));
     });
@@ -40,17 +40,17 @@ class _NewsFeedScreenState extends State<NewsFeedScreen> {
         ),
         elevation: 0,
         centerTitle: false,
-        actions: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Icon(
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
               Icons.add_comment,
               color: AppColors.linkedinBlue,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Icon(
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
               Icons.search,
               color: AppColors.linkedinBlue,
             ),
@@ -58,7 +58,7 @@ class _NewsFeedScreenState extends State<NewsFeedScreen> {
         ],
       ),
       body: Container(
-        margin: EdgeInsets.only(left: 10, right: 10, top: 10),
+        margin: EdgeInsets.only(left: 5, right: 5, top: 5),
         child: ListView.builder(
             itemCount: newsFeedList.length,
             itemBuilder: (context, index) {
@@ -90,6 +90,7 @@ class NewFeedCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,9 +114,12 @@ class NewFeedCard extends StatelessWidget {
               newsFeedModel.designation,
               style: TextStyle(color: AppColors.linkedinBlue),
             ),
-            trailing: Icon(
-              Icons.more_vert,
-              color: AppColors.linkedinBlue,
+            trailing: IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.more_vert,
+                color: AppColors.linkedinBlue,
+              ),
             ),
           ),
           Padding(
@@ -129,48 +133,41 @@ class NewFeedCard extends StatelessWidget {
           SizedBox(
             height: 5,
           ),
-          Image.network(newsFeedModel.imageUrl),
+          Container(
+            child: Image.network(newsFeedModel.imageUrl),
+          ),
           SizedBox(
             height: 5,
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          Container(
+            padding: const EdgeInsets.only(left: 10.0, bottom: 3),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Expanded(
-                  flex: 4,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        "${newsFeedModel.likes} likes",
-                        style: TextStyle(color: AppColors.linkedinDarkGray),
-                      ),
-                      Text(
-                        "${newsFeedModel.comments} comments",
-                        style: TextStyle(color: AppColors.linkedinDarkGray),
-                      ),
-                    ],
-                  ),
+                Row(
+                  children: <Widget>[
+                    Text(
+                      "${newsFeedModel.likes} likes",
+                      style: TextStyle(color: AppColors.linkedinDarkGray),
+                    ),
+                    SizedBox(width: 15),
+                    Text(
+                      "${newsFeedModel.comments} comments",
+                      style: TextStyle(color: AppColors.linkedinDarkGray),
+                    ),
+                  ],
                 ),
-                Expanded(
-                    flex: 2,
-                    child: SizedBox(
-                      width: 10,
-                    )),
-                Expanded(
-                    flex: 2,
-                    child: Align(
-                      alignment: Alignment.centerRight,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Icon(Icons.share),
-                          Icon(Icons.comment),
-                          Icon(Icons.favorite_border),
-                        ],
-                      ),
-                    ))
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    IconButton(onPressed: () {}, icon: Icon(Icons.share)),
+                    IconButton(onPressed: () {}, icon: Icon(Icons.comment)),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.favorite_border_rounded)),
+                  ],
+                )
               ],
             ),
           )
