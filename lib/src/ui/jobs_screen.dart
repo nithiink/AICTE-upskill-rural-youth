@@ -81,8 +81,8 @@ class _JobsScreenState extends State<JobsScreen> {
                 unselectedColor: AppColors.white,
                 pressedColor: AppColors.linkedinDarkGray,
                 children: {
-                  0: Text("Active"),
-                  1: Text("All"),
+                  0: Text("Remote"),
+                  1: Text("Freelance"),
                   2: Text("Saved"),
                 },
                 groupValue: value,

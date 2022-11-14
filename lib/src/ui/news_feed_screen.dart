@@ -35,7 +35,7 @@ class _NewsFeedScreenState extends State<NewsFeedScreen> {
       backgroundColor: AppColors.linkedinLightGray,
       appBar: AppBar(
         title: Text(
-          "News",
+          "Feed",
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
         ),
         elevation: 0,

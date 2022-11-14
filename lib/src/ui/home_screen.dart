@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 label: "Home"),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.person,
+                  Icons.book_rounded,
                   //   color: AppColors.linkedinBlue,
                 ),
                 label: "Home"),
