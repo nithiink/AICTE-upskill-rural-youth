@@ -119,17 +119,18 @@ class MessageCard extends StatelessWidget {
             "at ${messageModel.time}",
             style: TextStyle(fontSize: 12),
           ),
+          SizedBox(height: 5),
           messageModel.isMessagesUnRead
               ? Container(
-                  height: 10,
-                  width: 10,
+                  height: 20,
+                  width: 20,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                       color: AppColors.linkedinBlue,
-                      borderRadius: BorderRadius.circular(2)),
+                      borderRadius: BorderRadius.circular(10)),
                   child: Text(
                     "1",
-                    style: TextStyle(color: AppColors.white, fontSize: 8),
+                    style: TextStyle(color: AppColors.white, fontSize: 11),
                   ),
                 )
               : SizedBox(
