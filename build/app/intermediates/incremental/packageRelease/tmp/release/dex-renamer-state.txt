@@ -1,4 +1,4 @@
-#Mon Nov 14 20:02:45 IST 2022
+#Tue Nov 15 10:43:14 IST 2022
 base.0=/Users/nithiinkathiresan/Development/College Projects/AICTE - Upskill Rural Youth/AICTE-upskill-rural-youth/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
